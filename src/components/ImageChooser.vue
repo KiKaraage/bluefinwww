@@ -197,7 +197,7 @@ const getSupportedArchitectures = computed(() => {
   }))
 })
 
-const BLUEFIN_DOWNLOAD_URL = "https://projectbluefin.dev/%TEMPLATE%"
+const BLUEFIN_DOWNLOAD_URL = "https://download.projectbluefin.io/%TEMPLATE%"
 
 const reset = () => {
   selectedRelease.value = undefined
