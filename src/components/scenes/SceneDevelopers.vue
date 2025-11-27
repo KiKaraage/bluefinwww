@@ -69,24 +69,6 @@ const { t } = useI18n<MessageSchema>({
               <div>
                 <div class="icon-wrap">
                   <img
-                    src="/brands/cncf.svg"
-                    alt="CNCF logo blur"
-                    loading="lazy"
-                  />
-                  <img
-                    src="/brands/cncf.svg"
-                    alt="CNCF logo"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <p>{{ t("Devs.BoxThree") }}</p>
-            </div>
-
-            <div class="brand-item">
-              <div>
-                <div class="icon-wrap">
-                  <img
                     src="/brands/homebrew.svg"
                     alt="Homebrew logo blur"
                     loading="lazy"
@@ -117,6 +99,24 @@ const { t } = useI18n<MessageSchema>({
                 </div>
               </div>
               <p>{{ t("Devs.BoxFive") }}</p>
+            </div>
+
+            <div class="brand-item">
+              <div>
+                <div class="icon-wrap">
+                  <img
+                    src="/brands/cncf.svg"
+                    alt="CNCF logo blur"
+                    loading="lazy"
+                  />
+                  <img
+                    src="/brands/cncf.svg"
+                    alt="CNCF logo"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <p>{{ t("Devs.BoxThree") }}</p>
             </div>
 
             <div class="brand-item">
