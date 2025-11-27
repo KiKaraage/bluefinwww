@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { marked } from "marked"
-import { LangPoweredBy, LangSocialLinks } from "../../content"
+import { LangPoweredBy, LangSocialLinks, LangAlumniCompanies, LangSponsors } from "../../content"
 
 import type { MessageSchema } from "../../locales/schema"
 import { useI18n } from "vue-i18n"
@@ -24,6 +24,52 @@ const { t } = useI18n<MessageSchema>({
           loading="lazy"
           style="width: 100%; height: 200px"
         ></IframeResizer>
+
+        <div style="margin-top: 60px">
+          <h3 style="margin-bottom: 30px; font-size: 2rem; text-transform: none; font-weight: 600; text-align: center;">{{ $t("Flock.AlumniTitle") }}</h3>
+          <div class="logo-list alumni-logos">
+            <template v-for="brand in LangAlumniCompanies" :key="brand.imageUrl">
+              <a v-if="brand.projectUrl" :href="brand.projectUrl" target="_blank">
+                <img
+                  :src="brand.imageUrl"
+                  :alt="brand.altText"
+                  :title="brand.altText"
+                  loading="lazy"
+                />
+              </a>
+              <img
+                v-else
+                :src="brand.imageUrl"
+                :alt="brand.altText"
+                :title="brand.altText"
+                loading="lazy"
+              />
+            </template>
+          </div>
+        </div>
+
+        <div style="margin-top: 60px; margin-bottom: 40px;">
+          <h3 style="margin-bottom: 30px; font-size: 2rem; text-transform: none; font-weight: 600; text-align: center;">{{ $t("Flock.SponsorsTitle") }}</h3>
+          <div class="logo-list sponsor-logos">
+            <template v-for="brand in LangSponsors" :key="brand.imageUrl">
+              <a v-if="brand.projectUrl" :href="brand.projectUrl" target="_blank">
+                <img
+                  :src="brand.imageUrl"
+                  :alt="brand.altText"
+                  :title="brand.altText"
+                  loading="lazy"
+                />
+              </a>
+              <img
+                v-else
+                :src="brand.imageUrl"
+                :alt="brand.altText"
+                :title="brand.altText"
+                loading="lazy"
+              />
+            </template>
+          </div>
+        </div>
       </div>
     </section>
     <div class="container">
