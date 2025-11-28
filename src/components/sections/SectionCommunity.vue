@@ -41,7 +41,7 @@ const { t } = useI18n<MessageSchema>({
         </div>
 
         <div class="community-card contribute-card">
-          <div class="card-text">
+          <div class="contrib-text">
             <h3>{{ t("Community.Contribute.Title") }}</h3>
             <p>{{ t("Community.Contribute.Description") }}</p>
             <div class="card-buttons">
@@ -53,9 +53,9 @@ const { t } = useI18n<MessageSchema>({
               </a>
             </div>
           </div>
-          <div class="card-image">
+          <div class="contrib-image">
             <a href="https://github.com/ublue-os/bluefin/pulse" target="_blank" title="View Bluefin's Pulse on GitHub">
-              <img src="https://repobeats.axiom.co/api/embed/40b85b252bf6ea25eb90539d1adcea013ccae69a.svg" alt="GitHub Repository Metrics" loading="lazy" width="814" height="318" />
+              <img src="https://repobeats.axiom.co/api/embed/40b85b252bf6ea25eb90539d1adcea013ccae69a.svg" alt="GitHub Repository Metrics" loading="lazy" />
             </a>
           </div>
         </div>
@@ -161,13 +161,12 @@ const { t } = useI18n<MessageSchema>({
   }
 
   .contribute-card {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-    align-items: center;
+    align-items: start;
 
-    .card-text {
-      flex: 1;
-
+    .contrib-text {
       h3 {
         font-size: 2.4rem;
         font-weight: 600;
@@ -212,14 +211,11 @@ const { t } = useI18n<MessageSchema>({
       }
     }
 
-    .card-image {
-      flex: 1;
-      text-align: center;
-
+    .contrib-image {
       img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
-        border-radius: 4px;
+        display: block;
       }
     }
   }
@@ -240,9 +236,9 @@ const { t } = useI18n<MessageSchema>({
     }
 
     .contribute-card {
-      flex-direction: column;
+      grid-template-columns: 1fr;
       
-      .card-text .card-buttons {
+      .contrib-text .card-buttons {
         justify-content: center;
       }
     }
