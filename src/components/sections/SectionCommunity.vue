@@ -161,11 +161,12 @@ const { t } = useI18n<MessageSchema>({
   }
 
   .contribute-card {
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
 
     .card-text {
-      width: 100%;
+      flex: 1;
 
       h3 {
         font-size: 2.4rem;
@@ -212,7 +213,7 @@ const { t } = useI18n<MessageSchema>({
     }
 
     .card-image {
-      width: 100%;
+      flex: 1;
       text-align: center;
 
       img {
@@ -234,6 +235,14 @@ const { t } = useI18n<MessageSchema>({
       }
 
       .card-content .card-buttons {
+        justify-content: center;
+      }
+    }
+
+    .contribute-card {
+      flex-direction: column;
+      
+      .card-text .card-buttons {
         justify-content: center;
       }
     }
