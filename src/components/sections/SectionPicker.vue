@@ -14,7 +14,15 @@ const { t } = useI18n<MessageSchema>({
 .picker-header {
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
+
+  .picker-tag,
+  h2 {
+    text-align: left;
+  }
+
+  p {
+    text-align: center;
+  }
 }
 
 p :deep(a) {
