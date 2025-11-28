@@ -39,6 +39,26 @@ const { t } = useI18n<MessageSchema>({
             </div>
           </div>
         </div>
+
+        <div class="community-card contribute-card">
+          <div class="card-text">
+            <h3>{{ t("Community.Contribute.Title") }}</h3>
+            <p>{{ t("Community.Contribute.Description") }}</p>
+            <div class="card-buttons">
+              <a class="community-button" href="https://github.com/ublue-os/bluefin" target="_blank">
+                <span class="button-icon">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </span>
+                <span class="button-label">{{ t("Community.Contribute.Button") }}</span>
+              </a>
+            </div>
+          </div>
+          <div class="card-image">
+            <a href="https://github.com/ublue-os/bluefin/pulse" target="_blank" title="View Bluefin's Pulse on GitHub">
+              <img src="https://repobeats.axiom.co/api/embed/40b85b252bf6ea25eb90539d1adcea013ccae69a.svg" alt="GitHub Repository Metrics" loading="lazy" width="814" height="318" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -136,6 +156,69 @@ const { t } = useI18n<MessageSchema>({
           display: flex;
           align-items: center;
         }
+      }
+    }
+  }
+
+  .contribute-card {
+    flex-direction: column;
+    gap: 30px;
+
+    .card-text {
+      width: 100%;
+
+      h3 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: var(--color-text);
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: var(--color-text-light);
+        margin-bottom: 24px;
+      }
+
+      .card-buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .community-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        background: var(--color-blue);
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 1.4rem;
+        font-weight: 600;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: var(--color-blue-dark, #0056b3);
+        }
+
+        .button-icon {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    .card-image {
+      width: 100%;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
       }
     }
   }
