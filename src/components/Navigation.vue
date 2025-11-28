@@ -26,7 +26,7 @@ const links: Record<string, Link> = {
   // '#scene-gamers': { name: 'Gamers', icon: IconControllerClassic },
   "#scene-mission": { name: "Navbar.OurMission" },
   "#scene-picker": { name: "Navbar.TryOut", icon: IconDownload },
-  "#scene-faq": { name: "Navbar.FAQ" }
+  "#community": { name: "Navbar.Community" }
 }
 
 const linksAmount = Object.keys(links).length
