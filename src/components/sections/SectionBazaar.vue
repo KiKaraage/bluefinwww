@@ -147,7 +147,7 @@ const { t } = useI18n<MessageSchema>({
   text-align: center;
 
   p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1.6;
     color: var(--color-text-light);
   }
